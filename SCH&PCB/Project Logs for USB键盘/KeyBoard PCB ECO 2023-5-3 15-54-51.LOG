@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=LED3 Pin=U1-12
+Removed Pin From Net: NetName=SW1 Pin=U1-27
+Added Pin To Net: NetName=SW1 Pin=U1-13
+Added Pin To Net: NetName=LED3 Pin=U1-27
+Added Member To Class: ClassName=KeyBoard Member=Component C1 104
+Added Room: Name=KeyBoard
