@@ -162,10 +162,10 @@ HAL_TIM_Base_Start_IT(&htim2);
   //    HAL_Delay(15);
     }
 	
-	 if(KEY2_FLAG == 1&&KEY2_OLD_FLAG==0)//CTRL + V
+	 if(KEY2_FLAG == 1&&KEY2_OLD_FLAG==0)//escape
     {  
-      buffer[0] = 0x01; //L CTRL
-      buffer[2] = 0x19; //C
+      buffer[0] = 0x00; //
+      buffer[2] = 0x29; //escape
       USBD_HID_SendReport(&hUsbDeviceFS, buffer, 8); //send
 	HAL_GPIO_WritePin(LED2_GPIO_Port ,LED2_Pin ,GPIO_PIN_RESET);
 //     HAL_Delay(15); //delay
@@ -181,10 +181,10 @@ HAL_TIM_Base_Start_IT(&htim2);
   //    HAL_Delay(15);
     }
 	
-	if(KEY3_FLAG == 1 && KEY3_OLD_FLAG==0)//backspace
+	if(KEY3_FLAG == 1 && KEY3_OLD_FLAG==0)//delete
     {  
       buffer[0] = 0x00; //
-      buffer[2] = 0x2A; //backspace
+      buffer[2] = 0x4C; //Delete
       USBD_HID_SendReport(&hUsbDeviceFS, buffer, 8); //send
 	HAL_GPIO_WritePin(LED3_GPIO_Port ,LED3_Pin ,GPIO_PIN_RESET);	
 //      HAL_Delay(15); //delay
